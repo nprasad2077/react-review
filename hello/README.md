@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hello React
 
-## Available Scripts
+Define a simple `<Hello />` component to practice working with props in React.
 
-In the project directory, you can run:
+## Prerequisites
 
-### `npm start`
+* React
+* Create-react-app
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Instructions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Create a react app in this directory (`lib/hello`) using `create-react-app`.
+Then follow the requirements below.
 
-### `npm test`
+## Requirements
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For this exercise, you're going to build a `<Hello />` component that renders
+some data passed in as props.
 
-### `npm run build`
+### Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Create a react app in this directory using `create-react-app`. Then create
+a file called `Hello.js` in the `src/` directory.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Function Component
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Using a function, define a component called `Hello` that renders an `h1` with
+the text `"Hello World"` in it. Update your `<App>` component so that it renders
+your new `Hello` component.
 
-### `npm run eject`
+### First Prop
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Update your component so that it accepts a `name` property. Instead of rendering
+`"Hello World"`, your `Hello` component should now render a message with the
+value of `name`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Update your `Hello` component in `App.js` so that you're passing in a name as
+a props.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Plagiarism
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Take a moment to refamiliarize yourself with the [Plagiarism policy](https://git.generalassemb.ly/DC-WDI/Administrative/blob/master/plagiarism.md). Plagiarized work will not be accepted.
 
-## Learn More
+## [License](LICENSE)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
+1.  All software code is licensed under GNU GPLv3. For commercial use or
+    alternative licensing, please contact legal@ga.co.
