@@ -1,10 +1,12 @@
 import React from 'react'
-import 
+import Hello from './Hello'
+
+const name = 'Nikhil'
 
 function App() {
   return (
-    <div>App
-      <Hello />
+    <div>
+      <Hello name={name} />
     </div>
   )
 }
