@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React To Do
 
-## Available Scripts
+Practice working with state by building a simple to do list.
 
-In the project directory, you can run:
+## Prerequisites
 
-### `npm start`
+* React
+* State and props
+* Create-react-app
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Instructions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Create a react app in this directory (`lib/todo`) using `create-react-app`. Then
+follow the requirements below.
 
-### `npm test`
+## Requirements
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For this exercise, you're going to build a to do list to practice working with
+state, props, and forms:
 
-### `npm run build`
+![react to do list application](./wdi-todo.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Your app should have the following components:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* App - container component for entire application (all state and callbacks
+    should be here)
+  * ToDoForm - for creating new to dos, should invoke a callback passed in as
+      a prop to update state in App
+  * ToDoList - container component for to dos, should receive list of to dos from
+      App component's state
+    * ToDoItem - component for single to do; your app should render one of these
+        components for each item in the App component's state.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This is to practice working with state, passing state as props, and updating
+state with callbacks. For this application, you only need to have application
+state in your App component.
 
-### `npm run eject`
+Your state will look like this:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```js
+[
+  {
+    title: "Wash the dishes",
+    complete: false
+  },
+  {
+    title: "Walk the dog",
+    complete: false
+  },
+  {
+    title: "Make the bed",
+    complete: true
+  },
+]
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+When someone submits the form to add a to do item, it should save the to do to
+state in the App component. Because you're using a form here, the ToDoForm
+component will need state so your input is a controlled component.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+> What's a controlled component? What is application state versus form state?
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+When someone clicks the "Mark as Complete" link, that item should update so the
+`complete` property for that to do is `true`; when the user clicks "Mark as
+Incomplete", it should update so that property is `false.`
 
-## Learn More
+## Plagiarism
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Take a moment to refamiliarize yourself with the [Plagiarism policy](https://git.generalassemb.ly/DC-WDI/Administrative/blob/master/plagiarism.md). Plagiarized work will not be accepted.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## [License](LICENSE)
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
+1.  All software code is licensed under GNU GPLv3. For commercial use or
+    alternative licensing, please contact legal@ga.co.
