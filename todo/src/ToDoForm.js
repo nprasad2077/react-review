@@ -1,19 +1,24 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from 'react';
 
-function ToDoForm() {
-    const [input, setInput] = useState('')
+const ToDoForm = ({ addTask }) => {
 
-  return (
-    <div>
-        <form>
-            <label for='input'>Add to List</label>
-            <input type='text' name='input' id='input'></input>
-            <input type='submit'></input>
+    const [ userInput, setUserInput ] = useState('');
+
+    const handleChange = (e) => {
+        setUserInput(e.currentTarget.value)
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        addTask(userInput);
+        setUserInput("");
+    }
+    return (
+        <form onSubmit={handleSubmit}>
+            <input value={userInput} type="text" onChange={handleChange} placeholder="Enter task..."/>
+            <button>Submit</button>
         </form>
+    );
+};
 
-    </div>
-  )
-}
-
-export default ToDoForm
+export default ToDoForm;
