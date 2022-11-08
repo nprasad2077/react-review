@@ -13,9 +13,9 @@ code {
 }
 
 .app {
-  display: flex;
+  text-align: center;
 }
 
-.side {
-  margin-right: 20px;
+.strike {
+  text-decoration: line-through;
 }
